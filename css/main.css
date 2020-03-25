@@ -1,0 +1,329 @@
+/*------------GENEL AYARLAR------------*/
+
+@font-face{
+	font-family:'Raleway'; /*font tipi*/
+	src: url('../fonts/Raleway-Regular.ttf'); /*Fontu tanıttık*/
+}
+body{
+	background:#ffffff; /*beyaz*/
+	color: #3f3f3f; /*koyu gri*/
+	font:14px / 28px arial;
+	font-family : 'Raleway';
+}
+h1{ /*Bütün h1 özellikleri*/
+	font-size:52px;
+	letter-spacing:4px;
+	margin-bottom: 20px;
+}
+.sectionHeader{ /*h2 başlık classları*/
+	background: #FF4500;
+	border-bottom: 6px solid #000;
+	height: 60px;
+	color:#fff;
+	display: inline-block;
+	line-height:60px;
+	font-size: 24px;
+	padding : 5px 40px;
+	letter-spacing : 2px;
+	margin-bottom : 20px;
+}
+.sectionArea{ 
+	padding : 80px 0;	
+}
+h3{
+	font-size: 16px;
+	color: #FF4500;
+	transition: all .5s ease;
+}
+
+/*-----------GRİD AYARLAR (container sütün  ve satir özellikleri)------------------*/
+
+/*class başlarına nokta konur*/
+.container {
+	width : 90%; /*genişlik*/
+	margin : 0 auto; /*sayfa ortalandı*/
+	display: flex; /*görseller yanyana gelir*/
+}
+
+
+/*---------feature*/
+.featuresBody .container{
+	justify-content: space-between;
+}
+.col4{
+	flex-grow: 1;
+	width: 25%;/*3 sütunu böldüğümüz için*/
+}
+
+/*-------------------ANASAYFA AYARLARI-----------------*/
+/*logo*/
+header .logo{
+	margin-right : auto; /*logoyu otomatik sağa ayarladı*/	
+}
+header .logo img{
+	display: block;
+	height: 70px; /*logo yüksekliği verdik */	
+}
+#mainSlider{
+	height:500px;
+	background: url('../img/mainHome.jpg') center center no-repeat;
+	background-size: cover;
+}
+#mainCaption{
+	height:500px;
+	background: rgba(0,0,0, .7); /*siyah caption 5koyu gelirse 3 yap*/
+}
+
+/*menu*/
+.menu li{
+	float: left; /*Sola kaydırdı*/
+}
+.menu li a{
+	padding : 27px 17px; /*yukarıdan ve yandan boşluk verdik*/
+	display : block; /*yukarıdan ve aşağıdan verilen boşukları ayarladı*/
+	text-decoration: none; /*alt çizgi istemiyoruz*/
+	letter-spacing: 2px; /*anasayfa kelimesindeki harfler arasında boşluk koydu*/
+	color : #333333; /*gri tonu*/
+	transition: all .5s ease; 
+}
+.menu li:hover a{
+	background:#FF4500;  /*sayfamın ana rengi turuncu*/
+	color: #FFF; /*harflerin rengi beyaz*/
+}
+.caption{
+	display:flex;/*içerikleri yanyana koyar*/
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
+	width: 100%; 
+	color: #fff;
+}
+/*-----------Feature*/
+.featuresTop{
+	text-align: center; /*başlıkları ortaladık*/
+}
+.item{
+	padding: 10px 20px;
+}
+.zoom{
+	position : relative;
+	overflow: hidden; /*zoom classı üzerine gelince çalışıcak*/
+	display: inline-block;
+	width:100%; /*33.33 kapsayanın yüzde yüzünü kapsar*/
+	vertical-align: top;
+}
+.zoom img{
+	display: block;
+	width : 100%;
+	height: auto;
+	transition: all .5s ease;
+}
+.resim{
+	margin: 0 auto;
+}
+.konu{
+	background-color:#f5f5f5;
+}
+.item .itemText{
+	text-align: center;
+	padding: 5px;
+	border:1px solid #FF4500; /*anarenk*/
+}
+.item:hover .zoom img{
+	transform: scale(1.25); /*görsel büyüklüüğünü arttırdık*/
+}
+.item:hover h3{ /*yazının üstüne gelince hover denir*/
+	color: #fff;	
+}
+.item:hover .itemText{ /*yazının üstüne gelince hover denir*/
+	background:#FF4500;
+	color: #fff;
+	transition : all .5s ease;
+}
+.btnDetails{
+	color: #FF4500;
+	padding: 5px 10px;
+	text-decoration: none;
+	border:1px solid #FF4500;
+	transition: all .5s ease;
+}
+.item:hover .btnDetails{
+	color: #fff;
+	border: 1px solid #fff;
+}
+.itemText p{
+	margin: 20px 0;
+}
+
+/*-------------footer*/
+footer{
+	background: #FF4500;
+	text-align: center;
+}
+.footerItem{
+	padding: 20px;
+}
+.footerItem img{
+	height: 90px;
+	opacity: .7;
+}
+footer h3{
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+}
+footer .fa {
+	font-size: 30px;
+	color: #f5deb3;
+	line-height: 50px;
+	transition: .3s ease;
+}
+footer .fa:hover{
+	color: #fff;
+}
+footer p{
+	color: #f5deb3;
+	line-height:20px;
+}
+.footerLinks a{
+	text-decoration: none;
+	color: #f5deb3;
+	letter-spacing:2px;
+	transition: .3s ease;
+}
+.footerLinks a:hover{
+	text-decoration: underline;
+	color: #fff;
+}
+.socialLinks li{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDİA QUERİES(SİTEYİ KÜÇÜLTTÜĞÜMÜZDE BOZULAMAMASI İÇİN)*/
+
+@media screen and (max-width:960px){
+	.caption h1 {
+		font-size: 32px;
+		letter-spacing: 2px;	
+	}
+	footer .fa{
+		font-size:24px;
+	}
+	footer h3{
+		font-size: 16px;
+	}
+	.inspectBody .container{
+		flex-direction: column;
+	}
+	.inspectBody .container .col2{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:720px){
+	header .container{
+		flex-direction:column;
+		justify-content:center;
+		align-items: center;
+	}
+	header .logo{
+		margin: 0 auto;
+	}
+	.caption h1 {
+		font-size: 28px;
+		letter-spacing: 2px;	
+	}
+	.featuresBody .container{
+		flex-direction: column;
+	}
+	.featuresBody .container .col3{
+		width:80%;
+		margin: 0 auto; /*ortalama yapar*/
+	}
+	footer .container{
+		flex-direction: column;
+	}
+	footer .container .col3{
+		width:100%;
+	}
+	.sectionHeader{
+		font-size:24px;
+	}
+	.inspectBody .container .col2{
+		padding-left:0;
+		padding-right:0;
+	}
+	.formShape{
+		display:none;
+	}
+}
+
+@media screen and (max-width:540px){
+	.caption h1 {
+		font-size: 20px;
+		letter-spacing: 0px;	
+	}
+	.featuresBody .container .col3{
+		width:100%;
+		margin: 0 auto; /*ortalama yapar*/
+	}
+	.sectionHeader{
+		font-size:20px;
+	}
+	.contactForm{
+		width:80%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
